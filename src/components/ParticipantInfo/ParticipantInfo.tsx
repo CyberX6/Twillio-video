@@ -15,6 +15,7 @@ import usePublications from '../../hooks/usePublications/usePublications';
 import useTrack from '../../hooks/useTrack/useTrack';
 import useParticipantIsReconnecting from '../../hooks/useParticipantIsReconnecting/useParticipantIsReconnecting';
 import { useAppState } from '../../state';
+import { Transcript } from './Transcript';
 
 const borderWidth = 2;
 
@@ -209,6 +210,11 @@ export default function ParticipantInfo({
             <Typography variant="body1" className={classes.typography} component="span">
               {participant.identity}
               {isLocalParticipant && ' (You)'}
+            </Typography>
+          </span>
+          <span style={{ marginLeft: '80px' }} className={classes.identity}>
+            <Typography variant="body1" className={classes.typography} component="span">
+              <Transcript />
             </Typography>
           </span>
         </div>

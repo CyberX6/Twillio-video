@@ -5,6 +5,8 @@ import useChatContext from '../../hooks/useChatContext/useChatContext';
 import useVideoContext from '../../hooks/useVideoContext/useVideoContext';
 import { setImmediate } from 'timers';
 import EventEmitter from 'events';
+import { jsx } from '@emotion/react/macro';
+import IntrinsicAttributes = jsx.JSX.IntrinsicAttributes;
 
 const mockConversation: any = new EventEmitter();
 mockConversation.getMessages = jest.fn(() => Promise.resolve({ items: ['mockMessage'] }));
@@ -21,7 +23,7 @@ const mockUseVideoContext = useVideoContext as jest.Mock<any>;
 const mockOnError = jest.fn();
 
 const mockRoom = { sid: 'mockRoomSid' };
-const wrapper: React.FC = ({ children }) => <ChatProvider>{children}</ChatProvider>;
+const wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => <ChatProvider>{children}</ChatProvider>;
 
 describe('the ChatProvider component', () => {
   beforeEach(() => {

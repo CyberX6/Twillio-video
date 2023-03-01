@@ -139,6 +139,8 @@ export default function DeviceSelectionDialog({ open, onClose }: { open: boolean
         <div className={classes.listSection}>
           <AudioOutputList />
         </div>
+        {/*
+// @ts-ignore */}
         <Hidden smDown>
           <Divider />
           <div className={classes.listSection}>

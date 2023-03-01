@@ -117,6 +117,8 @@ export default function DeviceSelectionScreen({ name, roomName, setStep }: Devic
             <LocalVideoPreview identity={name} />
           </div>
           <div className={classes.mobileButtonBar}>
+            {/*
+// @ts-ignore */}
             <Hidden mdUp>
               <ToggleAudioButton className={classes.mobileButton} disabled={disableButtons} />
               <ToggleVideoButton className={classes.mobileButton} disabled={disableButtons} />
@@ -127,6 +129,8 @@ export default function DeviceSelectionScreen({ name, roomName, setStep }: Devic
         <Grid item md={5} sm={12} xs={12}>
           <Grid container direction="column" justifyContent="space-between" style={{ alignItems: 'normal' }}>
             <div>
+              {/*
+// @ts-ignore */}
               <Hidden smDown>
                 <ToggleAudioButton className={classes.deviceButton} disabled={disableButtons} />
                 <ToggleVideoButton className={classes.deviceButton} disabled={disableButtons} />
@@ -181,6 +185,8 @@ export default function DeviceSelectionScreen({ name, roomName, setStep }: Devic
 
         <Grid item md={12} sm={12} xs={12}>
           <Grid container direction="row" alignItems="center" style={{ marginTop: '1em' }}>
+            {/*
+            // @ts-ignore */}
             <Hidden smDown>
               <Grid item md={7} sm={12} xs={12}>
                 <SettingsMenu mobileButtonClass={classes.mobileButton} />

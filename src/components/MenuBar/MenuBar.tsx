@@ -81,6 +81,8 @@ export default function MenuBar() {
       )}
       <footer className={classes.container}>
         <Grid container justifyContent="space-around" alignItems="center">
+          {/*
+// @ts-ignore */}
           <Hidden smDown>
             <Grid style={{ flex: 1 }}>
               <Typography variant="body1">
@@ -94,11 +96,15 @@ export default function MenuBar() {
               <ToggleVideoButton disabled={isReconnecting} />
               {!isSharingScreen && !isMobile && <ToggleScreenShareButton disabled={isReconnecting} />}
               {process.env.REACT_APP_DISABLE_TWILIO_CONVERSATIONS !== 'true' && <ToggleChatButton />}
+              {/*
+// @ts-ignore */}
               <Hidden smDown>
                 <Menu />
               </Hidden>
             </Grid>
           </Grid>
+          {/*
+// @ts-ignore */}
           <Hidden smDown>
             <Grid style={{ flex: 1 }}>
               <Grid container justifyContent="flex-end">

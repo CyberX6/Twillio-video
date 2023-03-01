@@ -80,7 +80,7 @@ export default function usePasscodeAuth() {
   );
 
   const updateRecordingRules = useCallback(
-    async (room_sid, rules) => {
+    async (room_sid: any, rules: any) => {
       return fetch('/recordingrules', {
         headers: {
           'Content-Type': 'application/json',

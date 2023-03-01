@@ -21,7 +21,9 @@ window.fetch = jest.fn(() =>
   })
 );
 
-const wrapper: React.FC = ({ children }) => <AppStateProvider>{children}</AppStateProvider>;
+const wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <AppStateProvider>{children}</AppStateProvider>
+);
 
 describe('the useAppState hook', () => {
   beforeEach(jest.clearAllMocks);

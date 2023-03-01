@@ -18,7 +18,7 @@ export interface IParticipantContext {
 
 export const ParticipantContext = createContext<IParticipantContext>(null!);
 
-export const ParticipantProvider: React.FC = ({ children }) => {
+export const ParticipantProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const mobileGalleryViewParticipants = useGalleryViewParticipants(true);
   const galleryViewParticipants = useGalleryViewParticipants();
   const speakerViewParticipants = useSpeakerViewParticipants();

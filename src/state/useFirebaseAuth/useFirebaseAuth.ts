@@ -38,7 +38,7 @@ export default function useFirebaseAuth() {
   );
 
   const updateRecordingRules = useCallback(
-    async (room_sid, rules) => {
+    async (room_sid: any, rules: any) => {
       const headers = new window.Headers();
 
       const idToken = await user!.getIdToken();
